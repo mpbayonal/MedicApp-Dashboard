@@ -1,2 +1,4 @@
 # MedicApp Dashboard
- MedicApp 
+ MedicApp iOS app's dashboard
+ 
+ https://github.com/mpbayonal/MedicApp
