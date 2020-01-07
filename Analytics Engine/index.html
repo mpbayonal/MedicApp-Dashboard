@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+    <link href="https://cdn.webdatarocks.com/latest/webdatarocks.min.css" rel="stylesheet"/>
+    <script src="https://cdn.webdatarocks.com/latest/webdatarocks.toolbar.min.js"></script>
+    <script src="https://cdn.webdatarocks.com/latest/webdatarocks.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+  </head>
+  <body>
+    <h1>MedicApp</h1>
+
+
+    <button class="btn btn-dark" onclick="problemasCardiacosHora()">Ver irregularidades cardíacas por hora</button>
+    <button class="btn btn-dark" onclick="problemasCardiacosEdad()">Ver irregularidades cardíacas por edad</button>
+    <button class="btn btn-dark" onclick="frecuenciaCardiacaEdad()">Ver frecuencia cardíaca promedio por edad</button>
+    <button class="btn btn-dark" onclick="frecuenciaCardiacaEdadSexo()">Ver frecuencia cardíaca promedio por edad en los hombres</button>
+    <button class="btn btn-dark" onclick="frecuenciaCardiacaEdadSexo()">Ver frecuencia cardíaca promedio por edad en las mujeres</button>
+    <button class="btn btn-dark" onclick="problemasCardiacosFecha()">Ver número de casos de irregularidades cardíacas en el tiempo </button>
+    <button class="btn btn-dark" onclick="medicamentosMasConsumidos()">Ver los medicamentos más usados</button>
+    <button class="btn btn-dark" onclick="numeroPromedioMedicamentosEdad()">Ver el número promedio de medicamentos por edad</button>
+    <button class="btn btn-dark" onclick="medicamentosnumeroSexo()">Ver por medicamento el número de mujeres que los toman </button>
+    <button class="btn btn-dark" onclick="medicamentosnumeroSexo()">Ver por medicamento el número de hombres que los toman </button>
+    <button class="btn btn-dark" onclick="medicamentosEdadpromedio()">Ver la edad promedio de los pacientes que consumen cada medicamento  </button>
+    <button class="btn btn-dark" onclick="medicamentosLogsHora()">Ver el número de veces que los medicamentos son tomados a tiempo por medicamento</button>
+    <button class="btn btn-dark" onclick="medicamentosLogsHoraEdad()">Ver el número de veces que los medicamentos son tomados a tiempo por edad</button>
+    <button class="btn btn-dark" onclick="medicamentosLogsHoraEdadSexo()">Ver el número de veces que los medicamentos son tomados a tiempo por sexo y edad </button>
+    <button class="btn btn-dark" onclick="medicamentosLogsHoraSexo()">Ver el número de veces que los medicamentos son tomados a tiempo por medicamento y sexo </button>
+
+
+
+
+
+    <div id="wdr-component"></div>
+    <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+    <script>cargar()</script>
+  </body>
+</html>
